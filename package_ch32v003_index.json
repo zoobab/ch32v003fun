@@ -104,8 +104,8 @@
               "host": "x86_64-pc-linux-gnu",
               "url": "https://github.com/zoobab/ch32v003fun/raw/refs/heads/minichlink-static/minichlink/static/minichlink_linux_amd64.zip",
               "archiveFileName": "minichlink_linux_amd64.zip",
-              "checksum": "SHA-256:411f51e8cc52fe3a29eb8ebdeb9efdb9350cd45aafd0fc4d8c22c7aaec29eaf0",
-              "size": "153417"
+              "checksum": "SHA-256:73b90d0f1fc40977d1242bbba8766baa3b81b2765e1e0c5de634ba31e3b3c373",
+              "size": "585032"
             },
             {
               "host": "aarch64-linux-gnu",
