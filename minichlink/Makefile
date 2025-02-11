@@ -14,7 +14,7 @@ ifeq ($(OS),Windows_NT)
 else
 	OS_NAME := $(shell uname -s | tr A-Z a-z)
 	ifeq ($(OS_NAME),linux)
-		LDFLAGS:=-lpthread -lusb-1.0 -ludev
+		LDFLAGS:=-lpthread -lusb-1.0 -ludev -static
 	endif
 	ifeq ($(OS_NAME),darwin)
 		LDFLAGS:=-lpthread -lusb-1.0 -framework CoreFoundation -framework IOKit
@@ -35,7 +35,7 @@ minichlink : $(C_S)
 	gcc -o $@ $^ $(LDFLAGS) $(CFLAGS) $(INCS)
 
 minichlink.so : $(C_S)
-	gcc -o $@ $^ $(LDFLAGS) $(CFLAGS) $(INCS) -shared -fPIC
+	gcc -o $@ $^ $(LDFLAGS) $(CFLAGS) $(INCS) -fPIC
 
 minichlink.dll : $(C_S)
 	x86_64-w64-mingw32-gcc -o $@ $^ $(LDFLAGS_WINDOWS) $(CFLAGS_WINDOWS) $(INCS) -shared -DMINICHLINK_AS_LIBRARY
