@@ -8,7 +8,7 @@ C_S:=minichlink.c pgm-wch-linke.c pgm-esp32s2-ch32xx.c nhc-link042.c ardulink.c 
 # target remote :2345
 
 CFLAGS_WINDOWS:=-Os -s -Wall -D_WIN32_WINNT=0x0600 -I. -Wall -DCH32V003 -DMINICHLINK
-LDFLAGS_WINDOWS:=-L. -lpthread -lusb-1.0 -lsetupapi -lws2_32
+LDFLAGS_WINDOWS:=-L. -lpthread -l:libusb-1.0.a -lsetupapi -lws2_32 -static
 ifeq ($(OS),Windows_NT)
 	TOOLS:=minichlink.exe
 else
