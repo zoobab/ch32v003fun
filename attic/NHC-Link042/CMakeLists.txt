@@ -1,6 +1,8 @@
 # CMake minimum version
 cmake_minimum_required (VERSION 3.1)
 
+set (CMAKE_SYSTEM_NAME generic)
+
 # Project Infomation
 project( NHC-Link042 )
 enable_language(ASM)
